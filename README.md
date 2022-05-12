@@ -8,7 +8,7 @@ For this project, I will create a 2D rope simulator.
 
 We will use the framework provided by Professor Kayar for the optional assignment.
 
-![](RackMultipart20220608-1-ywjpvy_html_55d5689a5ce1192d.png)
+![Demo](demo.gif)
 
 In order to visualize the physics, we will create controls for changing anchor points and for changing the gravity acting in the system.
 
@@ -22,7 +22,7 @@ In order to do the integration, we will be using Verlet integration so that the 
 
 The pseudocode for the Verlet integration is:
 
-![](RackMultipart20220608-1-ywjpvy_html_352e09ec41f2c188.png)
+![Verlet integration pseduocode](images/verletPseudocode.png)
 
 In this integration, we are operating independent of the velocity, we simply need to track the previous position. This way, the calculation doesn&#39;t depend only on the previous velocity, it depends on the average of the velocity over the last timestep.
 
@@ -30,7 +30,7 @@ We can then compute the velocity of a particle as the division of the distance b
 
 In terms of code, we do that in the following way:
 
-![](RackMultipart20220608-1-ywjpvy_html_f8a338ca16cf2ea4.png)
+![Compute Velocity of a particle](images/computeVelocity.png)
 
 We set the length of each spring as a constraint. At each iteration, we must enforce these constraints to prevent the rope segment from elongating beyond the length it is supposed to.
 
@@ -48,11 +48,11 @@ Where n is the total distance between the current and expected distance.
 
 We can see that if we execute for infinite iterations, eventually the constraints will be satisfied. However, that is not computationally feasible, hence we execute it for Simulation-\&gt;numRelax number of times. This approximates quite well the segment offset, even though it has a minor margin of error.
 
-![](RackMultipart20220608-1-ywjpvy_html_7cb70155f151fd5f.png)
+![Jakobsen Algo](images/jakobsen.png)
 
 Where the relaxConstraint function as per the paper on Jakobsen Method is:
 
-![](RackMultipart20220608-1-ywjpvy_html_108be78bde8f97f0.png)
+![relax constraint pseudocode](images/relaxConstraintPseudocode.png)
 
 Now that the physics simulations are complete, we add some features to the visualization to better represent the computation.
 
@@ -68,7 +68,7 @@ We will add the following functions:
 
 We set a few particles of the rope to be fixed. This means that those particles do not have gravity acting on them and do not move. This helps demonstrate the simulation even better.
 
-![](RackMultipart20220608-1-ywjpvy_html_32848723efacaa45.png)
+![Anchors](images/anchors.png)
 
 We create these functions in particle.h so that we can fix and unfix particles that we select.
 
