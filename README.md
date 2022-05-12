@@ -91,3 +91,31 @@ Same as function 3, however, we change the X component to 9.81f.
 1. Reset Horizontal Gravity
 
 When the corresponding key is pressed, we set the X component of the gravity vector as 0.0f.
+
+
+# OPENGL	SETUP
+
+- Download shared files
+- Create a new folder, e.g. GL_Folder, to put the content ( glew and freeglut)
+- Create an empty C++ project in Visual studio (see below).
+![config](images/config.png)
+
+- Right click Project &rarr; Properties &rarr;Configuration Properties &rarr; VC++ Directories &rarr;Include Directories:
+    Select **_Include_** folders of both glew and freeglut
+- Configuration Properties &rarr; Linker &rarr; Input:
+    Additional Dependencies:
+    Write: **_glew32.lib_** and **_freeglut.lib_**
+- Configuration Properties &rarr; Linker &rarr; General:
+    Additional Library Directories:
+    Select **_lib_** folders of both glew and freeglut
+- Copy **_glew32.dll_** and **_freeglut.dll_** from GL_Folder and paste them to your project folder
+
+`
+Be sure that your subsystem is Windows:
+`
+![subsystem](images/subsystem.png)
+
+`
+And your character set is set to: Not Set
+`
+![charset](images/charset.png)
