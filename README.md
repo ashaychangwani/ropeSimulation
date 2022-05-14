@@ -1,9 +1,6 @@
-# **Bonus Project**
-
-**Ashay Changwani**
-
 # **Rope Simulator:**
-
+**Ashay Changwani**
+___
 For this project, I will create a 2D rope simulator.
 
 We will use the framework provided by Professor Kayar for the optional assignment.
