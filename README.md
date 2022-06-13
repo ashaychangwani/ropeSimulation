@@ -1,7 +1,13 @@
-# **Rope Simulator:**
+# **Rope Simulator**
 
 **Ashay Changwani**
 ___
+This project is Part 3 of my simulation series:
+
+[Part 1 - Particle Simulation](http://github.com/ashaychangwani/particleSimulation)
+
+[Part 2 - Spring Simulation](http://github.com/ashaychangwani/springSimulation)
+
 For this project, I will create a 2D rope simulator.
 
 We will use the framework provided by Professor Kayar for the optional assignment.
