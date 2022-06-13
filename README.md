@@ -10,8 +10,6 @@ This project is Part 3 of my simulation series:
 
 For this project, I will create a 2D rope simulator.
 
-We will use the framework provided by Professor Kayar for the optional assignment.
-
 ![Demo](images/demo.gif)
 
 In order to visualize the physics, we will create controls for changing anchor points and for changing the gravity acting in the system.
